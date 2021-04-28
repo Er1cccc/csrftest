@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"><script type="text/javascript">/*tag*/PAGE_SPEED_TIME = [new Date().getTime()];</script>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
+    <meta name="robots" content="all" />
+    <meta name="author" content="Tencent-CP" />
+    <meta name="Description" content="《QQ飞车》是首款腾讯自主研发的竞速类休闲网络游戏，底层架构基于世界领先的物理引擎PhysX，游戏手感全面超越市场同类产品，全力为用户打造逼真的驾驶体验；3D时尚人物造型、古朴潮流幻想的赛道主题、第三人称尾随视角，力求为用户营造身历其境的感觉。在2011年的5月，最高同时在线帐户数突破200万，乃中国网游史上第九款同时在线冲破百万大关的产品，并为全球游戏市场奉献了第一款同时在线破百万的竞速类网络游戏，同时，也使腾讯拥有了第一款同时在线破百万的自主研发产品。" />
+    <meta name="Keywords" content="QQ飞车,飞车,QQspeed,QQkart,SSC超级联赛,SSC2010,SSC2011,赛车游戏,赛车,卡丁车,休闲区,同城交友,跑跑,跑跑卡丁车,最好玩,时尚,时尚赛车,剃刀,针尖,针尖杯,腾讯游戏,QQ游戏,视频,WCG,赛道视频,沉睡森林,海滨发夹,海洋公园,漂移,飞车宝贝,宝贝,车队,子弹" />
+    <!-- 设计：cp | 重构：cp | 创建：2013/05/22 | 更新：| 团队博客：http://tgideas.qq.com/ -->
+    <title>礼包兑换专区-QQ飞车官方网站-腾讯游戏-竞速网游王者 突破300万同时在线</title>
+    <style type="text/css">
+        /*reset*/
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+        table{border-collapse:collapse;border-spacing:0;}
+        address,caption,cite,code,dfn,em,strong,th,var{font-weight:normal;font-style:normal;}
+        ol,ul{list-style:none;}
+        caption,th{text-align:left;}
+        h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+        q:before,q:after{content:'';}
+        fieldset,img,abbr,acronym{border:0;}
+
+        /*footer*/
+        #footer_ied{text-align:center;font-size:12px;line-height:19px;min-width:1000px;color:#6a5f5f;margin-top:-110px;}
+        .wrap_ied{margin:0 auto;padding:25px 30px;width:940px;}
+        .wrap_ied a{color:#6a5f5f;}
+        #footer_ied .e{font-size:10px;-webkit-text-size-adjust:none;}
+
+        /*页面样式*/
+        .c:before,.c:after{content:"";display:table;}
+        .c:after{clear:both;}
+        .c{zoom:1;}
+        body{font:12px/1.5 tahoma,\5b8b\4f53,sans-serif;padding-top:42px;text-align:justify;}
+        a{text-decoration:none;overflow:hidden;}
+        a:hover{text-decoration:underline;}
+        .wrap{background:url(//ossweb-img.qq.com/images/chanpin/speed/public/a20130522cdkey/rp.jpg) no-repeat 50% 0;min-width:1000px;}
+        .container{width:1000px;margin:0 auto;}
+        .pr{position:relative;}
+        .pa,.logo,.login,.share,.top-btn{position:absolute;}
+        .hide{display:block;width:0;height:0;overflow:hidden;}
+        .btn-ljlq,.z-t1,.z-t2,.z-t3,.list-b-n,.c-tel{font-size: 15px}
+
+        /* head */
+        .head{background:url(//ossweb-img.qq.com/images/chanpin/speed/public/a20130522cdkey/hd.jpg) no-repeat 50% 0;height:266px;}
+        .logo{width:115px;height:86px;left:38px;top:18px;}
+        .login{left:58px;top:244px;color:#ffffff;font-weight:bold;}
+        .login a{color:#ffff00;}
+        .share{left:733px;top:4px;}
+        .share a{width:16px;height:16px;margin-right:5px;float:left;display:inline;}
+        .top-btn{left:794px;top:0;}
+        .top-btn a{width:95px;height:26px;line-height:26px;color:#ffffff;text-align:center;text-decoration:none;display:block;float:left;}
+        /* content */
+        .content{background:url(//ossweb-img.qq.com/images/chanpin/speed/public/a20130522cdkey/ct.jpg) no-repeat 50% 0;height:594px;padding:0 370px 0 72px}
+        .c-top{height:170px;padding-top:10px;*padding-top:20px;}
+        .c-tl{width:258px;float:left;}
+        .c-tl img{margin-left:96px;margin-top:8px;}
+        .c-int{margin-top:10px;_margin-top:6px;line-height:24px;height:24px;}
+        .c-int label{width:96px;}
+        .c-int input{float:left;border:none;color:#ffb900;padding:2px;}
+        .z-t1,.z-t2,.z-t3{float:left;margin-top:3px;}
+        .z-t1{width:85px;height:21px;background-position:0 -77px;}
+        .z-t2{width:87px;height:17px;background-position:0 -106px;}
+        .z-t3{width:85px;height:19px;background-position:0 -133px;}
+        .i-ipt{width:137px;height:20px;background:url(//ossweb-img.qq.com/images/chanpin/speed/public/a20130522cdkey/ipt-t-bj.jpg) no-repeat;}
+        /* 选区 */
+        .sel,.sel-l{height:22px;line-height:22px;color:#ffb900;cursor:pointer;float:left;margin-right:20px;display:inline;border:1px solid #a4744e;background-color:#553e2c;}
+        .sel{width:141px;}
+        .sel-l{width:155px;}
+        .sel option,.sel-l option{background-color:#492e19;}
+        .i-ipt1{width:137px;height:20px;background:url(//ossweb-img.qq.com/images/chanpin/speed/public/a20130522cdkey/ipt-bj.jpg) no-repeat;padding-left:10px;}
+        .btn-ljlq{width:240px;height:71px;float:left;margin-top:10px;}
+        .list{margin-top:16px;height:75px;}
+        .lt-bt{font-size:16px;color:#fff3c7;font-family:Microsoft Yahei;}
+        .list-b{margin-top:7px;}
+        .list-b li{float:left;width:100%;}
+        .list-b-n{display:block;width:17px;height:17px;line-height:18px;text-align:center;color:#ffffff;margin:1px 0px 0 5px;float:left;background-position:-120px -80px;}
+        .list-b-t{display:block;text-align:justify; padding-left:35px;line-height:22px;color:#d1d1d1;}
+        .c-tel{background-position:0 -162px;padding-left:42px;color:#ff871c;font-size:18px;font-family:Microsoft Yahei;margin-top:20px;}
+    </style>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <div class="container">
+        <div class="head pr">
+            <h1 class="hide">礼包兑换专区</h1>
+            <a href="https://speed.qq.com/" title="QQ飞车" class="logo" target="_blank">QQ飞车</a>
+            <div class="login">
+                <div id="unlogin" class="unlogin" th:if="${session.user==null}">
+                    您好，请[<a href="javascript:void(0);" id="dologin1">登录</a>]
+                </div>
+                <!--unlogin：登录前状态-->
+                <div id="logined" class="unlogin" th:if="${session.user!=null}">
+                    <p>欢迎您，<span id='login_qq_span' th:text="${session.user.username}"></span>[<a href="javascript:void(0);" id="logout1">注销</a>]</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <!--未登录-->
+
+            <div class="c-top c" id="cdkey_unlogin">
+                <div class="c-t-l">
+                    <div class="c-int">
+                        <label style="font-size: 15px">10积分兑换一个币</label>
+                    </div>
+                    <div class="c-int">
+                        <label class="z-t1">游戏大区：</label>
+                        <div class="c">
+                            <select class="sel" id="receiverRegion">
+                                <option value="电信一区">电信一区</option>
+                                <option value="电信二区">电信二区</option>
+                                <option value="网通区">网通区</option>
+
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="c-tl">
+
+                        <p class="c-int">
+                            <label class="z-t3">领取qq号：</label>
+                            <!--<input type="text" class="i-ipt1">-->
+                            <input type="text" id="receiverQQ" class="i-ipt1" maxlength="4">
+                        </p>
+
+                    </div>
+                    <input id="senderQQ" th:if="${session.user!=null}" th:value="${session.user.username}" type="hidden">
+                    <button href="#" id="btn-ljlq"  title="立即领取">立即领取</button>
+                </div>
+            </div>
+            <!--end 未登录-->
+
+            <div class="c-bot">
+                <div class="list">
+                    <h3 class="lt-bt">活动规则：</h3>
+                    <ul class="list-b c">
+                        <li><strong class="list-b-n">1</strong><p class="list-b-t">登录页面后，选择好游戏大区，并输入礼包序号（CDKEY）和验证码；</p></li>
+                        <li><strong class="list-b-n">2</strong><p class="list-b-t">点击“立即领取”按钮，显示成功领取后，请登录游戏后在“我的物品”里查收。</p></li>
+                    </ul>
+                </div>
+                <div class="list">
+                    <h3 class="lt-bt">活动规则：</h3>
+                    <ul class="list-b c">
+                        <li><strong class="list-b-n">1</strong><p class="list-b-t">所有礼品均需先创建角色后才能获赠；</p></li>
+                        <li><strong class="list-b-n">2</strong><p class="list-b-t">创建角色步骤：点击“游戏下载”下载最新版本飞车客户端并安装后，登录客户端进行角色创建。</p></li>
+                    </ul>
+                </div>
+                <p class="c-tel">客服电话：0755 - 86013666</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 头底 -->
+<script type="text/javascript">
+    (function(o){if(window.attachEvent){window.attachEvent("onload",o);}else{window.addEventListener("load",o,false);};})(function(){
+        var d=document,
+            m=d.createElement("div"),
+            r=String(new Date()).split(":")[1],
+            l=function(u,y){
+                var s=d.createElement(y);
+                if(y=="script"){s.src=u;s.type="text/javascript";s.setAttribute("charset","gb2312");}
+                else{s.href=u;s.rel="stylesheet";s.type="text/css";};
+                d.getElementsByTagName("head")[0].appendChild(s);
+            };
+        //以下修改ost.css为各自产品的css地址
+        l("//ossweb-img.qq.com/images/js/top_js/speed/ost.css?v="+r,"link");
+        m.className="ost ost_bg";
+        m.style.cssText="position:absolute;top:-500px;";
+        m.innerHTML=['<ul class="ost_b">',
+            //以下修改各自链接，及指定按钮统计代码（广告修改gg.js）
+            '<li class="ost_tg ost_bg"><a href="//game.qq.com" target="_blank" class="ost_blnk" onclick="pgvSendClick({hottag:\'act.title.logo\'});">腾讯游戏</a></li>',
+            '<li class="ost_gg ost_bg"><a href="//speed.qq.com" id="ost_gg" target="_blank" class="ost_blnk" onclick="pgvSendClick({hottag:\'act.title.index\'});">精彩活动</a></li>',
+            '<li class="ost_i">',
+            '<p class="ost_t ost_bg"><a href="//speed.qq.com/main.shtml" target="_blank" class="ost_lnk" onclick="pgvSendClick({hottag:\'act.title.back\'});">返回官网首页</a></p>',
+            '<p class="ost_gl">',
+            '<a href="//speed.qq.com/web201008/download.shtml" target="_blank" class="ost_lnk ost_ldc" onclick="pgvSendClick({hottag:\'act.title.dl\'});">游戏下载</a>',
+            '<a href="//speed.qq.com/comm-htdocs/pay/?t=speed" target="_blank" class="ost_lnk ost_ldc" onclick="pgvSendClick({hottag:\'act.title.cz\'});">充值点券</a>',
+            '<a href="//speed.qq.com/comm-htdocs/vip/?t=speed" target="_blank" class="ost_lnk ost_ldc" onclick="pgvSendClick({hottag:\'act.title.vip\'});">开通紫钻</a>',
+            '</p>',
+            '</li>',
+            '</ul>'].join("");
+        d.body.appendChild(m);
+        d.body.style.paddingTop="42px";
+        l("//ossweb-img.qq.com/images/js/top_js/speed/gg.js?v="+r,"script");
+    });
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#btn-ljlq").click(function(){
+            var senderQQ=$("#senderQQ").val();
+            var receiverQQ=$("#receiverQQ").val();
+            var receiverRegion=$("#receiverRegion").val();
+            var param={"senderQQ":senderQQ,"receiverQQ":receiverQQ,"receiverRegion":receiverRegion}
+            $.ajax({
+                url:"/exchange",
+                data:param,
+                type:"get",
+                dataType:"json",
+                success:function (data) {
+                    if(data.code==0){
+                        alert("兑换成功");
+                        history.go(0);
+                    }else{
+                        alert(data.msg);
+                    }
+                }
+            });
+        })
+
+        $("#codeImg").click(function () {
+            history.go(0)
+            $(this).attr("src","https://ssl.captcha.qq.com/getimage?aid=21000104");
+        })
+
+        $("#dologin1").click(function(){
+                location.href="/qq";
+        })
+    })
+</script>
